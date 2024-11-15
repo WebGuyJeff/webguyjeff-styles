@@ -29,7 +29,13 @@ const config = {
 		]
 	},
 	devServer: {
-		static: './dist',
+		watchFiles: ['./index.html', 'src/**'],
+		static:  {
+			directory: path.join(__dirname, 'dist'),
+			watch: {
+				usePolling: false,
+			},
+		},
 	},
 	target: 'web',
 	plugins: [
