@@ -1,0 +1,9 @@
+:root {
+	font-family: "Lexend";
+	font-size: 1rem;
+	/* fluid root units (14px @ 768 - 18px @ 1920) */
+	/* font-size: clamp(14px, calc(0.875rem + ( (1vw - 7.68px) * 0.3472) ), 18px); */
+	background-color: var(--white);
+	color: var(--theme-colour-foreground);
+	scroll-behavior: smooth;
+}

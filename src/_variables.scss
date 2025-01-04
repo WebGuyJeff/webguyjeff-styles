@@ -1,0 +1,27 @@
+
+:root {
+	--blackish: #262626;
+	--white: #fff;
+	--grey: #ccc;
+	--lightGrey: #eee;
+	--theme-colour-background: #f8f801;
+	--theme-colour-foreground: #000;
+
+	--theme-gap-xs: 0.3em;
+	--theme-gap-s: 0.6em;
+	--theme-gap-m: 1.2em;
+	--theme-gap-l: 2.4em;
+
+	--indicate-emphasis: var(--theme-colour-foreground);
+	--indicate-go: green;
+	--indicate-stop: red;
+	--indicate-ready: yellow;
+
+	--link: rgb(127, 189, 247);
+
+	--box-radius: 0.4em;
+	--text-padding: 0.6em;
+
+	--anim-duration: 0.15s;
+	--background-light-grad: linear-gradient(#fff5 0%, #0000 100%);
+}

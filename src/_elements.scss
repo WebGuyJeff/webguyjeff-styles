@@ -1,0 +1,141 @@
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-start;
+	width: fit-content;
+}
+
+figure {
+    background-color: var(--grey);
+    border-radius: var(--box-radius);
+    overflow: hidden;
+    padding: 0;
+    margin: 1em 2em;
+
+	img {
+		margin: 0;
+	}
+
+	figcaption {
+		margin: var(--text-padding) 0.4em;
+		text-align: center;
+	}
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+	width: fit-content;
+	line-height: 1.4;
+
+	tbody {
+		tr:nth-child(even) {
+			background-color: #f7f7f7;
+		}
+	}
+
+	th,
+	td {
+		padding-left: 1em;
+		padding-top: 0.4em;
+		padding-bottom: 0.4em;
+		text-align: start;
+	}
+	
+	th:last-child,
+	td:last-child {
+		padding-right: 1em;
+	}
+
+	thead {
+		
+		th {
+			padding-top: 0.8em;
+			padding-bottom: 0.8em;
+		}
+
+		tr {
+			background: var(--theme-colour-foreground);
+			vertical-align: middle;
+			text-align: left;
+			text-transform: capitalize;
+			color: var(--white);
+		}
+
+		tr > *:first-child {
+			border-top-left-radius: var(--box-radius);
+		}
+
+		tr > *:last-child {
+			border-top-right-radius: var(--box-radius);
+		}
+	}
+
+	tfoot {
+		tr {
+			background: var(--grey);
+			font-weight: bold;
+		}
+
+		tr > *:first-child {
+			border-bottom-left-radius: var(--box-radius);
+		}
+
+		tr > *:last-child {
+			border-bottom-right-radius: var(--box-radius);
+		}
+	}
+
+	caption {
+		font-size: 0.875em;
+		margin-bottom: 0.6em;
+	}
+}
+
+input {
+	font-size: inherit;
+}
+
+/* all bordered-box inputs */
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+textarea,
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+	margin-block: 0.2em;
+	border: none;
+	border-radius: var(--box-radius);
+	box-shadow: inset -1px 1px 3px 0px var(--black);
+	padding: var(--text-padding);
+	height: 1.4em;
+}
+
+a {
+	color: inherit;
+	background-image: linear-gradient(to right, var(--indicate-go) 0%, var(--link) 0);
+	background-size: 100% 20%;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	transition: background-size .4s ease;
+
+	&:hover {
+		background-size: 100% 100%;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,199 @@
+.menu {
+	align-items: center;
+	margin-block: var( --theme-gap-s );
+
+	.menu_item {
+		display: inline-block;
+		cursor: pointer;
+		text-decoration: none;
+		color: inherit;
+		font-size: inherit;
+		font-weight: bold;
+	}
+
+	&.menu-links {
+		gap: var( --theme-gap-s );
+
+		.menu_item {
+			padding-block: var( --theme-gap-s );
+			padding-inline: var( --theme-gap-xs );
+		}
+	}
+
+	&.menu-bar {
+		border-radius: var(--box-radius);
+		background: var( --theme-colour-foreground );
+		color: var( --theme-colour-background );
+
+		.menu_item {
+			display: inline-block;
+			margin: 0;
+			outline: 0;
+			border: 0;
+			border-radius: 0;
+			background: none;
+			padding: var( --theme-gap-s );
+			transition: transform var( --anim-duration ) ease-in-out, 
+						box-shadow var( --anim-duration ) ease-in-out,
+						color      var( --anim-duration ) ease-in-out,
+						background var( --anim-duration ) ease-in-out;
+
+			&:hover {
+				transform: translate(0.2em, -0.2em);
+				box-shadow: -0.2em 0.2em 0 0 #000;
+				background: var( --theme-colour-background );
+				color: var( --theme-colour-foreground );
+				z-index: 1;
+			}
+		}
+
+		&.flex-row {
+			.menu_item {
+				&:first-child {
+					border-top-left-radius: var(--box-radius);
+					border-bottom-left-radius: var(--box-radius);
+				}
+	
+				&:last-child {
+					border-top-right-radius: var(--box-radius);
+					border-bottom-right-radius: var(--box-radius);
+				}
+			}
+		}
+
+		&.flex-column {
+			align-items: flex-start;
+
+			.menu_item {
+				&:first-child {
+					border-top-left-radius: var(--box-radius);
+					border-top-right-radius: var(--box-radius);
+				}
+	
+				&:last-child {
+					border-bottom-left-radius: var(--box-radius);
+					border-bottom-right-radius: var(--box-radius);
+				}
+			}
+		}
+	}
+}
+
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	padding: 0;
+	background-color: inherit;
+	color: inherit;
+}
+	.dropdown_checkbox {
+		display: none;
+	}
+	
+	.dropdown_toggle {
+		display: inline-block;
+		cursor: inherit; /* pointer explicit as <label> reverts to default */
+
+		.dropdown_toggleIcon {
+			display: inline;
+			height: 1ex;
+			vertical-align: middle;
+			transition: rotate var(--anim-duration) ease-in-out;
+		}
+	}
+	.dropdown_contents {
+		display: flex;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		flex-flow: column;
+		transition: opacity var(--anim-duration) ease-in-out;
+		visibility: hidden;
+		opacity: 0;
+		z-index: 1;
+		margin: 0;
+		border-radius: var(--box-radius);
+		box-shadow: 0 5px 12px 3px #0005, 0 0 4px 1px #0005;
+		cursor: auto;
+		padding: 0;
+		min-width: 10em;
+	}
+		.dropdown_item {
+			background: unset;
+			padding: var(--theme-gap-s);
+			text-decoration: none;
+			color: inherit;
+		}
+		.dropdown_item:first-child {
+			border-top-left-radius: var(--box-radius);
+			border-top-right-radius: var(--box-radius);
+		}
+		.dropdown_item:last-child {
+			border-bottom-left-radius: var(--box-radius);
+			border-bottom-right-radius: var(--box-radius);
+		}
+		.dropdown_item:hover {
+			background: var(--background-light-grad), var(--lightGrey);
+		}
+		.dropdown_item:active {
+			background: var(--background-light-grad), var(--indicate-go);
+		}
+
+/* If dropdown is child, move padding to its child to make touch area 100% */
+.dropdown_contents > .dropdown-touch {
+	padding: 0;
+}
+	.dropdown-touch > .dropdown_toggle:not( .menu_item > .dropdown_toggle ) {
+		display: block;
+		padding: var(--text-padding);
+	}
+
+/* position the content */
+.dropdown-up {
+
+	.dropdown_toggleIcon {
+		transform: scaley( -100% );
+	}
+
+	&> .dropdown_contents {
+		bottom: 100%;
+		top: unset;
+	}
+}
+
+/* show the content */
+.dropdown-hover:hover > .dropdown_contents,
+.dropdown-touch > .dropdown_checkbox:checked ~ .dropdown_contents {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* rotate the icon */
+.dropdown-hover:hover > .dropdown_toggle > .dropdown_toggleIcon,
+.dropdown-touch > .dropdown_checkbox:checked + .dropdown_toggle > .dropdown_toggleIcon {
+	rotate: 90deg;
+}
+.dropdown-up.dropdown-touch > .dropdown_checkbox:checked + .dropdown_toggle > .dropdown_toggleIcon,
+.dropdown-up.dropdown-hover:hover > .dropdown_toggle > .dropdown_toggleIcon {
+	rotate: -90deg;
+}
+
+.icon_arrow {
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 10"><polygon fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linejoin="round" x="5" y="" points="1,1 7,9 13,1" /></svg>');
+	color: inherit;
+}
+
+
+
+.footer-links {
+	a {
+		font-weight: 600;
+		background: none;
+
+		&:hover {
+			font-weight: 900;
+		}
+	}
+}

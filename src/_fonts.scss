@@ -1,0 +1,60 @@
+@font-face {
+	font-family:
+		"Lexend", "lexend", "Source Sans", "Helvetica Neue", Helvetica, "Arial Black", Arial, "sans-serif";
+	src:
+		//local("Lexend"),
+		url("https://cdn.webguyjeff.com/fonts/lexend/lexend-variable.ttf") format("truetype");
+}
+
+@font-face {
+	font-family:
+		"Lexend Exa", "lexend exa", "Source Sans", "Helvetica Neue", Helvetica, "Arial Black", Arial, "sans-serif";
+	src:
+		local("Lexend Exa"),
+		url("https://cdn.webguyjeff.com/fonts/lexend-exa/lexend-exa-variable.ttf") format("truetype");
+}
+
+@font-face {
+	font-family:
+		"Blinker", "blinker", "Source Sans", "Helvetica Neue", Helvetica, "Arial Black", Arial, "sans-serif";
+	src:
+		local("Blinker"),
+		url("https://cdn.webguyjeff.com/fonts/blinker/blinker-regular.ttf") format("truetype");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family:
+		"Blinker", "blinker", "Source Sans", "Helvetica Neue", Helvetica, "Arial Black", Arial, "sans-serif";
+	src:
+		local("Blinker"),
+		url("https://cdn.webguyjeff.com/fonts/blinker/blinker-semi-bold.ttf") format("truetype");
+	font-weight: 'semi-bold';
+}
+
+@font-face {
+	font-family:
+		"Blinker", "blinker", "Source Sans", "Helvetica Neue", Helvetica, "Arial Black", Arial, "sans-serif";
+	src:
+		local("Blinker"),
+		url("https://cdn.webguyjeff.com/fonts/blinker/blinker-bold.ttf") format("truetype");
+	font-weight: 'bold';
+}
+
+@font-face {
+	font-family:
+		"Blinker", "blinker", "Source Sans", "Helvetica Neue", Helvetica, "Arial Black", Arial, "sans-serif";
+	src:
+		local("Blinker"),
+		url("https://cdn.webguyjeff.com/fonts/blinker/blinker-extra-bold.ttf") format("truetype");
+	font-weight: 'extra-bold';
+}
+
+@font-face {
+	font-family:
+		"Blinker", "blinker", "Source Sans", "Helvetica Neue", Helvetica, "Arial Black", Arial, "sans-serif";
+	src:
+		local("Blinker"),
+		url("https://cdn.webguyjeff.com/fonts/blinker/blinker-black.ttf") format("truetype");
+	font-weight: 'black';
+}
