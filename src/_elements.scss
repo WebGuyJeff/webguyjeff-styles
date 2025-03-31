@@ -125,7 +125,7 @@ input[type="week"] {
 	height: 1.4em;
 }
 
-a {
+a:not(.menu a) {
 	color: inherit;
 	background-image: linear-gradient(to right, var(--indicate-go) 0%, var(--link) 0);
 	background-size: 100% 20%;

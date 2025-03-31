@@ -5,4 +5,5 @@ import "./_elements.scss";
 import "./_typography.scss";
 import "./_layout.scss";
 import "./_buttons.scss";
-import "./_menus.scss";
+import "./_navigation.scss";
+import "./parts/_footer.scss";

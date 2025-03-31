@@ -1,0 +1,10 @@
+.footer-links {
+	a {
+		font-weight: 600;
+		background: none;
+
+		&:hover {
+			font-weight: 900;
+		}
+	}
+}

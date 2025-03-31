@@ -1,6 +1,6 @@
 h1,h2,h3,h4,h5,h6 {
 	line-height: 1.6;
-	font-weight: bold;
+	font-weight: 900;
 	margin-block-start: 1.2em;
 	margin-block-end: 0.8em;
 	margin-inline-start: 0;
@@ -14,7 +14,7 @@ h4 { font-size: 1.125rem; } /*18px*/
 h5 { font-size: 1rem; } /*16px*/
 h6 {
 	font-size: 1rem; /*16px*/
-	font-weight: normal;
+	font-weight: 700;
 }
 
 h1:not(h1:first-child),
