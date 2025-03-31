@@ -6,6 +6,12 @@ a {
 	text-decoration: none;
 }
 
+hr {
+	font-size: 0;
+    border: 0;
+	border-top: 0.2rem solid currentColor;
+}
+
 nav {
 	display: flex;
 	justify-content: flex-start;
@@ -94,7 +100,6 @@ table {
 	}
 
 	caption {
-		font-size: 0.875em;
 		margin-bottom: 0.6em;
 	}
 }

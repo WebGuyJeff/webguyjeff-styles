@@ -1,3 +1,7 @@
+@use "abstracts/variables";
+
+body { font-family: "Inter"; }
+
 h1,h2,h3,h4,h5,h6 {
 	line-height: 1.6;
 	font-weight: 900;
@@ -7,15 +11,18 @@ h1,h2,h3,h4,h5,h6 {
 	margin-inline-end: 0;
 }
 
-h1 { font-size: 2.3125rem; } /*37px*/
-h2 { font-size: 1.8125rem; } /*29px*/
-h3 { font-size: 1.4375rem; } /*23px*/
-h4 { font-size: 1.125rem; } /*18px*/
-h5 { font-size: 1rem; } /*16px*/
-h6 {
-	font-size: 1rem; /*16px*/
-	font-weight: 700;
-}
+small          { font-size: variables.$fontSize_XSmall; }
+:root          { font-size: variables.$fontSize_base; }
+h6             { font-size: variables.$fontSize_small; }
+h5             { font-size: variables.$fontSize_medium; }
+h4             { font-size: variables.$fontSize_large; }
+h3             { font-size: variables.$fontSize_XLarge; }
+h2             { font-size: variables.$fontSize_XXLarge; }
+h1             { font-size: variables.$fontSize_XXXLarge; }
+.displaySmall  { font-size: variables.$fontSize_displaySmall; }
+.displayMedium { font-size: variables.$fontSize_displayMedium; }
+.displayLarge  { font-size: variables.$fontSize_displayLarge; }
+.displayXLarge { font-size: variables.$fontSize_displayXLarge; }
 
 h1:not(h1:first-child),
 h1+h2,
@@ -92,7 +99,7 @@ code,
 pre,
 kbd {
 	line-height: 1.4;
-	font-size: 1rem;
+	font-size: variables.$fontSize_base;
 }
 
 kbd {

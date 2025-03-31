@@ -1,0 +1,47 @@
+
+
+:root {
+	--blackish: #262626;
+	--white: #fff;
+	--grey: #ccc;
+	--lightGrey: #eee;
+	--theme-colour-background: #f8f801;
+	--theme-colour-foreground: #000;
+
+	--theme-gap-xs: 0.3em;
+	--theme-gap-s: 0.6em;
+	--theme-gap-m: 1.2em;
+	--theme-gap-l: 2.4em;
+
+	--indicate-emphasis: var(--theme-colour-foreground);
+	--indicate-go: green;
+	--indicate-stop: red;
+	--indicate-ready: yellow;
+
+	--link: rgb(127, 189, 247);
+
+	--box-radius: 0.4em;
+	--text-padding: 0.6em;
+
+	--anim-duration: 0.15s;
+	--background-light-grad: linear-gradient(#fff5 0%, #0000 100%);
+}
+
+
+/**
+ * Fluid font sizes adjust between 400px and 1920px viewport width.
+ *
+ * see https://utopia.fyi/type/calculator/?c=400,16,1.125,1920,18,1.2,10,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+ */
+$fontSize_XSmall: clamp(0.8889rem, 0.8761rem + 0.0512vw, 0.9375rem);
+$fontSize_base: clamp(1rem, 0.9671rem + 0.1316vw, 1.125rem);
+$fontSize_small: clamp(1.125rem, 1.0658rem + 0.2368vw, 1.35rem);
+$fontSize_medium: clamp(1.2656rem, 1.1724rem + 0.373vw, 1.62rem);
+$fontSize_large: clamp(1.4238rem, 1.2869rem + 0.5475vw, 1.944rem);
+$fontSize_XLarge: clamp(1.6018rem, 1.4094rem + 0.7695vw, 2.3328rem);
+$fontSize_XXLarge: clamp(1.802rem, 1.5396rem + 1.0498vw, 2.7994rem);
+$fontSize_XXXLarge: clamp(2.0273rem, 1.6768rem + 1.402vw, 3.3592rem);
+$fontSize_displaySmall: clamp(2.2807rem, 1.8201rem + 1.8425vw, 4.0311rem);
+$fontSize_displayMedium: clamp(2.5658rem, 1.968rem + 2.3911vw, 4.8373rem);
+$fontSize_displayLarge: clamp(2.8865rem, 2.1185rem + 3.0718vw, 5.8048rem);
+$fontSize_displayXLarge: clamp(3.2473rem, 2.2688rem + 3.9141vw, 6.9657rem);

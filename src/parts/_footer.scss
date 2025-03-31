@@ -1,10 +1,15 @@
-.footer-links {
-	a {
-		font-weight: 600;
-		background: none;
+body > footer {
+	margin-top: 1.5em;
+	border-top: solid 0.4em var( --theme-colour-foreground );
 
-		&:hover {
-			font-weight: 900;
+	.footer-links {
+		a {
+			font-weight: 600;
+			background: none;
+
+			&:hover {
+				font-weight: 900;
+			}
 		}
 	}
 }

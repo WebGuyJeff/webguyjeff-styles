@@ -5,8 +5,8 @@
 	gap: calc( var(--theme-gap-s) );
 	margin-block: var(--theme-gap-s);
 	display: flex;
-	align-items: stretch;
-	justify-content: stretch;
+	flex-flow: row wrap;
+	justify-content: center;
 
 	.menu_item {
 		display: block;
@@ -14,8 +14,9 @@
 		padding: var( --theme-gap-s ) calc( var(--theme-gap-s) / 2 );
 		text-decoration: none;
 		color: inherit;
-		font-size: inherit;
 		font-weight: bold;
+		transition: background-size .25s ease,
+		            background .25s ease;
 
 		&:where( .menu > .menu_item ) {
 			background-image: linear-gradient(to right, var(--wgj__menu_backColour) 0%, var(--wgj__menu_backColour) 0);
@@ -23,7 +24,6 @@
 			background-position: 0 100%;
 			background-repeat: no-repeat;
 			text-decoration: none;
-			transition: background-size .25s ease;
 		
 			&:hover {
 				background-size: 100% 15%;

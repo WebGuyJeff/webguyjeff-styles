@@ -1,0 +1,10 @@
+.sideBar {
+	position: sticky;
+	top: 1.5rem;
+	margin-left: 0.5rem;
+	height: 0;
+
+	@media screen and (max-width: 1000px) {
+		display: none;
+	}
+}

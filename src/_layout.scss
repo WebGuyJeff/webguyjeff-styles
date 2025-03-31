@@ -4,24 +4,13 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: var( --theme-colour-background );
-
-	&> header {
-		margin-bottom: 1.5em;
-		border-bottom: solid 0.4em var( --theme-colour-foreground );
-	}
-
-	&> footer {
-		margin-top: 1.5em;
-		border-top: solid 0.4em var( --theme-colour-foreground );
-	}
+	color: var(--theme-colour-foreground);
 }
 
-.container {
-	display: block;
-	flex: 1 40em;
+.contentContainer {
 	margin: 0 auto;
-	padding: 1.5em;
-	max-width: 40em;
+	padding: .5em 1.5em;
+	max-width: 35em;
 }
 
 .flex-row {
