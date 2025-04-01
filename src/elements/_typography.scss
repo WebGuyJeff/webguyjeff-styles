@@ -1,4 +1,4 @@
-@use "abstracts/variables";
+@use '../abstracts/variables' as *;
 
 body { font-family: "Inter"; }
 
@@ -11,18 +11,18 @@ h1,h2,h3,h4,h5,h6 {
 	margin-inline-end: 0;
 }
 
-small          { font-size: variables.$fontSize_XSmall; }
-:root          { font-size: variables.$fontSize_base; }
-h6             { font-size: variables.$fontSize_small; }
-h5             { font-size: variables.$fontSize_medium; }
-h4             { font-size: variables.$fontSize_large; }
-h3             { font-size: variables.$fontSize_XLarge; }
-h2             { font-size: variables.$fontSize_XXLarge; }
-h1             { font-size: variables.$fontSize_XXXLarge; }
-.displaySmall  { font-size: variables.$fontSize_displaySmall; }
-.displayMedium { font-size: variables.$fontSize_displayMedium; }
-.displayLarge  { font-size: variables.$fontSize_displayLarge; }
-.displayXLarge { font-size: variables.$fontSize_displayXLarge; }
+small          { font-size: $fontSize_XSmall; }
+:root          { font-size: $fontSize_base; }
+h6             { font-size: $fontSize_small; }
+h5             { font-size: $fontSize_medium; }
+h4             { font-size: $fontSize_large; }
+h3             { font-size: $fontSize_XLarge; }
+h2             { font-size: $fontSize_XXLarge; }
+h1             { font-size: $fontSize_XXXLarge; }
+.displaySmall  { font-size: $fontSize_displaySmall; }
+.displayMedium { font-size: $fontSize_displayMedium; }
+.displayLarge  { font-size: $fontSize_displayLarge; }
+.displayXLarge { font-size: $fontSize_displayXLarge; }
 
 h1:not(h1:first-child),
 h1+h2,
@@ -82,7 +82,7 @@ sup {
 }
 
 pre {
-    border-radius: var(--box-radius);
+    border-radius: $radius_small;
 	padding: 0.8em;
 	overflow-x: auto;
 }
@@ -90,8 +90,8 @@ pre {
 samp,
 code,
 pre {
-	background-color: var(--blackish);
-	color: var(--white);
+	background-color: $colour_black;
+	color: $colour_white;
 }
 
 samp,
@@ -99,13 +99,13 @@ code,
 pre,
 kbd {
 	line-height: 1.4;
-	font-size: variables.$fontSize_base;
+	font-size: $fontSize_base;
 }
 
 kbd {
     margin: 0 1px;
     border: 1px solid #cccccc;
-    border-radius: var(--box-radius);
+    border-radius: $radius_small;
     box-shadow: 0 1px 0 rgb(0 0 0 / 20%), 0 0 0 1px #fafafa inset, 0 0 0 1px white inset;
     background-color: #f7f7f7;
     padding: 0.2em 0.4em;

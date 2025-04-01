@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+
+input {
+	font-size: inherit;
+}
+
+/* all bordered-box inputs */
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+textarea,
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+	margin-block: 0.2em;
+	border: none;
+	border-radius: $radius_small;
+	box-shadow: inset -1px 1px 3px 0px $colour_black;
+	padding: $space_XSmall;
+	height: 1.4em;
+}
+
+fieldset {
+	border: $border_thin;
+}

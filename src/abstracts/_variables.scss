@@ -1,32 +1,16 @@
-
-
-:root {
-	--blackish: #262626;
-	--white: #fff;
-	--grey: #ccc;
-	--lightGrey: #eee;
-	--theme-colour-background: #f8f801;
-	--theme-colour-foreground: #000;
-
-	--theme-gap-xs: 0.3em;
-	--theme-gap-s: 0.6em;
-	--theme-gap-m: 1.2em;
-	--theme-gap-l: 2.4em;
-
-	--indicate-emphasis: var(--theme-colour-foreground);
-	--indicate-go: green;
-	--indicate-stop: red;
-	--indicate-ready: yellow;
-
-	--link: rgb(127, 189, 247);
-
-	--box-radius: 0.4em;
-	--text-padding: 0.6em;
-
-	--anim-duration: 0.15s;
-	--background-light-grad: linear-gradient(#fff5 0%, #0000 100%);
-}
-
+$colour_black: #000;
+$colour_yellow: #f8f801;
+$colour_pink: #ff64bf;
+$colour_green: #06b8ba;
+$colour_white: #fff;
+$colour_grey: #ccc;
+$colour_greyLight: #eee;
+$colour_themeBackground: $colour_yellow;
+$colour_themeForeground: $colour_black;
+$colour_themeEmphasis: $colour_themeForeground;
+$colour_themeGo: $colour_green;
+$colour_themeStop: red;
+$colour_themeReady: $colour_yellow;
 
 /**
  * Fluid font sizes adjust between 400px and 1920px viewport width.
@@ -45,3 +29,19 @@ $fontSize_displaySmall: clamp(2.2807rem, 1.8201rem + 1.8425vw, 4.0311rem);
 $fontSize_displayMedium: clamp(2.5658rem, 1.968rem + 2.3911vw, 4.8373rem);
 $fontSize_displayLarge: clamp(2.8865rem, 2.1185rem + 3.0718vw, 5.8048rem);
 $fontSize_displayXLarge: clamp(3.2473rem, 2.2688rem + 3.9141vw, 6.9657rem);
+
+$space_XSmall: 0.5rem;
+$space_small: 1rem;
+$space_medium: 2rem;
+$space_large: 3.5rem;
+$space_XLarge: 6rem;
+$space_XXlarge: 7.5rem;
+$space_XXXLarge: 10rem;
+
+$animation_duration: 0.15s;
+
+$radius_small: 0.4em;
+
+$border_thin: solid 0.125rem $colour_black;
+$border_medium: solid 0.25rem $colour_black; 
+$border_thick: solid 0.5rem $colour_black; 

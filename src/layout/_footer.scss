@@ -1,0 +1,31 @@
+@use '../abstracts/layout' as *;
+@use '../abstracts/variables' as *;
+
+body > footer {
+	margin-top: 1.5em;
+	border-top: $border_medium;
+
+	.footerMain {
+		@extend %flexRow;
+		gap: $space_medium;
+
+		a {
+			font-weight: 600;
+			background: none;
+
+			&:hover {
+				font-weight: 900;
+			}
+		}
+
+		.footerColumn {
+			@extend %flexColumn;
+			gap: $space_small;
+		}
+	}
+
+	.footerLinks {
+		@extend %flexRow;
+		justify-content: space-between;
+	}
+}

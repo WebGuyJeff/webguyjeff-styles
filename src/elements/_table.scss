@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as *;
+
+table {
+    border-spacing: 0;
+    width: 100%;
+	width: fit-content;
+	line-height: 1.4;
+
+	tbody {
+		tr:nth-child(even) {
+			background-color: #f7f7f7;
+		}
+	}
+
+	th,
+	td {
+		padding-left: 1em;
+		padding-top: 0.4em;
+		padding-bottom: 0.4em;
+		text-align: start;
+	}
+	
+	th:last-child,
+	td:last-child {
+		padding-right: 1em;
+	}
+
+	thead {
+		
+		th {
+			padding-top: 0.8em;
+			padding-bottom: 0.8em;
+		}
+
+		tr {
+			background: $colour_themeForeground;
+			vertical-align: middle;
+			text-align: left;
+			text-transform: capitalize;
+			color: $colour_white;
+		}
+
+		tr > *:first-child {
+			border-top-left-radius: $radius_small;
+		}
+
+		tr > *:last-child {
+			border-top-right-radius: $radius_small;
+		}
+	}
+
+	tfoot {
+		tr {
+			background: $colour_grey;
+			font-weight: bold;
+		}
+
+		tr > *:first-child {
+			border-bottom-left-radius: $radius_small;
+		}
+
+		tr > *:last-child {
+			border-bottom-right-radius: $radius_small;
+		}
+	}
+
+	caption {
+		margin-bottom: 0.6em;
+	}
+}

@@ -1,9 +1,7 @@
+@use '../abstracts/variables' as *;
+
 .menu {
-	--wgj__menu_backColour: var(--theme-colour-foreground);
-	--wgj__menu_foreColour: var(--theme-colour-background);
-	--wgj__menu_borderRadius: var(--box-radius);
-	gap: calc( var(--theme-gap-s) );
-	margin-block: var(--theme-gap-s);
+	margin-block: $space_small;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -11,7 +9,7 @@
 	.menu_item {
 		display: block;
 		cursor: pointer;
-		padding: var( --theme-gap-s ) calc( var(--theme-gap-s) / 2 );
+		padding: $space_small;
 		text-decoration: none;
 		color: inherit;
 		font-weight: bold;
@@ -19,7 +17,7 @@
 		            background .25s ease;
 
 		&:where( .menu > .menu_item ) {
-			background-image: linear-gradient(to right, var(--wgj__menu_backColour) 0%, var(--wgj__menu_backColour) 0);
+			background-image: linear-gradient(to right, #0000 4.999%, $colour_themeForeground 5%, $colour_themeForeground 95%, #0000 95.001%);
 			background-size: 100% 0%;
 			background-position: 0 100%;
 			background-repeat: no-repeat;
@@ -33,49 +31,46 @@
 
 		&:where( .menu-bar > .menu_item, .menu_item .menu_item ) {
 			margin: 0;
-			background: var( --wgj__menu_backColour );
-			padding: var( --theme-gap-s );
-			color: var( --wgj__menu_foreColour );
-			transition: color      var( --anim-duration ) ease-in-out,
-						background var( --anim-duration ) ease-in-out;
+			background: $colour_themeForeground;
+			padding: $space_small;
+			color: $colour_themeBackground;
+			transition: color      $animation_duration ease-in-out,
+						background $animation_duration ease-in-out;
 
 			&:hover {
-				background: var( --wgj__menu_foreColour );
-				color: var( --wgj__menu_backColour );
+				background: $colour_themeBackground;
+				color: $colour_themeForeground;
 				z-index: 1;
 			}
 		}
 	}
 
 	&-bar {
-		gap: 0;
-		border-radius: var(--wgj__menu_borderRadius);
 
 		.menu_item {
-			padding: var( --theme-gap-s );
+			padding: $space_small;
 		}
 
 		&--row {
-			display: flex;
-			flex-direction: row;
+			flex-flow: row;
 
 			.menu_item:first-child {
-				border-radius: var(--wgj__menu_borderRadius) 0 0 var(--wgj__menu_borderRadius);
+				border-radius: $radius_small 0 0 $radius_small;
 			}
 			.menu_item:last-child {
-				border-radius: 0 var(--wgj__menu_borderRadius) var(--wgj__menu_borderRadius) 0;
+				border-radius: 0 $radius_small $radius_small 0;
 			}
 		}
 
 		&--column {
-			display: flex;
-			flex-direction: column;
+			flex-flow: column;
+			width: fit-content;
 
 			.menu_item:first-child {
-				border-radius: var(--wgj__menu_borderRadius) var(--wgj__menu_borderRadius) 0 0;
+				border-radius: $radius_small $radius_small 0 0;
 			}
 			.menu_item:last-child {
-				border-radius: 0 0 var(--wgj__menu_borderRadius) var(--wgj__menu_borderRadius);
+				border-radius: 0 0 $radius_small $radius_small;
 			}
 		}
 	}
@@ -93,7 +88,7 @@
 	&_toggle {
 		display: block;
 		cursor: inherit; /* pointer explicit as <label> reverts to default */
-		padding: var( --theme-gap-s );
+		padding: $space_small;
 
 		.dropdown_checkbox {
 			display: none;
@@ -114,7 +109,7 @@
 				-webkit-mask-size: cover;
 				mask-size: cover;
 				background-color: currentColor;
-				transition: rotate var(--anim-duration) ease-in-out;
+				transition: rotate $animation_duration ease-in-out;
 			}
 		}
 
@@ -134,11 +129,11 @@
 
 	&-up {
 		.dropdown_toggleIcon:after {
-			transform: scaley( -100% );
+			transform: scaley(-100%);
 		}
 
 		.dropdown_toggle:hover,
-		.dropdown_toggle:has( .dropdown_checkbox:checked ) {
+		.dropdown_toggle:has( .dropdown_checkbox:checked) {
 	
 			.dropdown_toggleIcon:after {
 				rotate: -90deg;
@@ -151,12 +146,12 @@
 		position: absolute;
 		left: 0;
 		flex-flow: column;
-		transition: opacity var(--anim-duration) ease-in-out;
+		transition: opacity $animation_duration ease-in-out;
 		visibility: hidden;
 		opacity: 0;
 		z-index: 1;
 		margin: 0;
-		border-radius: var(--wgj__menu_borderRadius);
+		border-radius: $radius_small;
 		box-shadow: 0 5px 12px 3px #0005, 0 0 4px 1px #0005;
 		cursor: auto;
 		padding: 0;
@@ -167,7 +162,7 @@
 			left: 100%;
 		}
 
-		&:where( .dropdown-up > .dropdown_contents ) {
+		&:where( .dropdown-up > .dropdown_contents) {
 			top: unset;
 			bottom: 100%;
 	
@@ -177,22 +172,22 @@
 			}
 		}
 
-		&:where( .menu-bar--column .dropdown_contents ) {
+		&:where( .menu-bar--column .dropdown_contents) {
 			top: 0;
 			left: 100%;
 		}
 
-		&:where( .menu-bar--column .dropdown-up > .dropdown_contents ) {
+		&:where( .menu-bar--column .dropdown-up > .dropdown_contents) {
 			top: unset;
 			bottom: 0;
 			left: 100%;
 		}
 
 		.menu_item:first-child {
-			border-radius: var(--wgj__menu_borderRadius) var(--wgj__menu_borderRadius) 0 0;
+			border-radius: $radius_small $radius_small 0 0;
 		}
 		.menu_item:last-child {
-			border-radius: 0 0 var(--wgj__menu_borderRadius) var(--wgj__menu_borderRadius);
+			border-radius: 0 0 $radius_small $radius_small;
 		}
 
 		&:hover {

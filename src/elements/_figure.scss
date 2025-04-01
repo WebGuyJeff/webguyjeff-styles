@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as *;
+
+figure {
+    background-color: $colour_grey;
+    border-radius: $radius_small;
+    overflow: hidden;
+    padding: 0;
+    margin: 1em 2em;
+
+	img {
+		margin: 0;
+	}
+
+	figcaption {
+		margin: $space_XSmall 0.4em;
+		text-align: center;
+	}
+}

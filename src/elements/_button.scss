@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 button,
 input[type="button"],
 input[type="submit"],
@@ -7,18 +9,18 @@ input[type="file"]::before,
     display: inline-block;
     margin: 0.4em;
 	outline: none;
-	border: solid 1px var(--grey);
-    border-radius: var(--box-radius);
-	background: var(--background-light-grad), var(--grey);
+	border: solid 1px $colour_grey;
+    border-radius: $radius_small;
+	background: $colour_green, $colour_grey;
 	cursor: pointer;
-    padding: var(--text-padding);
+    padding: $space_XSmall;
 	text-decoration: none;
-	color: var(--theme-colour-foreground);
+	color: $colour_themeForeground;
     font-size: inherit;
     font-weight: bold;
-	transition: transform var(--anim-duration) ease-in-out, 
-				box-shadow var(--anim-duration) ease-in-out,
-				background var(--anim-duration) ease-in-out;
+	transition: transform $animation_duration ease-in-out, 
+				box-shadow $animation_duration ease-in-out,
+				background $animation_duration ease-in-out;
 }
 	button:hover,
 	input[type="button"]:hover,
@@ -28,7 +30,7 @@ input[type="file"]::before,
 	.button:hover {
 		transform: translate(0.2em, -0.2em);
 		box-shadow: -0.2em 0.2em 0 0 #000;
-		background: var(--background-light-grad), var(--lightGrey);
+		background: $colour_greyLight;
 		z-index: 1;
 	}
 	button:active,
@@ -39,7 +41,7 @@ input[type="file"]::before,
 	.button:active {
 		transform: translate(0, 0);
 		box-shadow: 0 0 0 0 #000;
-		background: var(--background-light-grad), var(--indicate-go);
+		background: $colour_themeGo;
 	}
 
 /* custom file selection button */
@@ -51,18 +53,18 @@ input[type="file"]::before {
 }
 
 .indicate-emphasis {
-	background: var(--background-light-grad), var(--indicate-emphasis);
-	color: var(--white);
+	background: $colour_themeEmphasis;
+	color: $colour_white;
 }
 .indicate-go  {
-	background: var(--background-light-grad), var(--indicate-go);
-	color: var(--white);
+	background: $colour_themeGo;
+	color: $colour_white;
 }
 .indicate-stop  {
-	background: var(--background-light-grad), var(--indicate-stop);
-	color: var(--white);
+	background: $colour_themeStop;
+	color: $colour_white;
 }
 .indicate-ready  {
-	background: var(--background-light-grad), var(--indicate-ready);
-	color: var(--black);
+	background: $colour_themeReady;
+	color: $colour_black;
 }

@@ -1,0 +1,8 @@
+@use '../abstracts/variables' as *;
+
+hr {
+	font-size: 0;
+    border: 0;
+	border-top: $border_thin;
+	margin: $space_large 0;
+}
