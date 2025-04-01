@@ -49,9 +49,22 @@ li:last-child {
 }
 
 blockquote {
-	color: #828282;
-	padding-left: 1.1875em; /*19px*/
-	border-left: .4375em solid rgba(0, 0, 0, 0.1);
+	margin-inline-end: $space_medium;
+	margin-inline-start: $space_medium;
+	position: relative;
+	padding-left: $space_medium;
+	color: inherit;
+
+	p:first-child:before {
+		display: block;
+		position: absolute;
+		top: -.8em;
+		left: -.4em;
+		transform: rotate( -15deg );
+		margin-right: 1.1875em;
+		font-size: 360%;
+		content: '\2760'
+	}
 }
 
 p,
@@ -111,4 +124,13 @@ kbd {
     padding: 0.2em 0.4em;
     text-shadow: 0 1px 0 white;
     color: #000;
+}
+
+i,
+address,
+blockquote,
+dfn,
+em,
+var {
+	font-style: oblique 10deg;
 }

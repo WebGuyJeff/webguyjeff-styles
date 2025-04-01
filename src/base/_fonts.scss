@@ -1,7 +1,66 @@
+
+/*
+
+`inter-latin.woff2` and `inter-latin-ext.woff2` were subsetted using the
+[Webfont Kit Generator](https://apps.gnome.org/WebfontKitGenerator/) but the produced woff2 files
+don't display the Inter font in the browser.
+
+Issue opened [here](https://github.com/rafaelmardojai/webfont-kit-generator/issues/57)
+
+In the meantime, I can't find a tool that will subset this font without breaking it, so using the
+non-subsetted but compressed `inter.woff2` produced using the same tool.
+
+// inter-latin
 @font-face {
-	font-family:
-		"Inter", "inter", "Helvetica Neue", Helvetica, "Arial Black", Arial, "sans-serif";
-	src:
-		local("Inter"),
-		url("/assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 100 900;
+	//src: local("Inter"), local("Inter-Regular"), url(/assets/fonts/inter/inter-latin.woff2) format("woff2");
+	src: url(/assets/fonts/inter/inter-latin-ext.woff2) format("woff2");
+	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+2215;
+}
+// inter-latin-ext
+@font-face {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 100 900;
+	//src: local("Inter"), local("Inter-Regular"), url(/assets/fonts/inter/inter-latin-ext.woff2) format("woff2");
+	src: url(/assets/fonts/inter/inter-latin-ext.woff2) format("woff2");
+	unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+20A0-20CF,U+2C60-2C7F,U+A720-A7FF;
+}
+
+// inter-latin italic
+@font-face {
+	font-family: Inter;
+	font-style: oblique 0deg 9.4deg;
+	font-weight: 100 900;
+	//src: local("Inter"), local("Inter-Regular"), url(/assets/fonts/inter/inter-latin.woff2) format("woff2");
+	src: url(/assets/fonts/inter/inter-latin-ext.woff2) format("woff2");
+	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+2215;
+}
+// inter-latin-ext italic
+@font-face {
+	font-family: Inter;
+	font-style: oblique 0deg 9.4deg;
+	font-weight: 100 900;
+	//src: local("Inter"), local("Inter-Regular"), url(/assets/fonts/inter/inter-latin-ext.woff2) format("woff2");
+	src: url(/assets/fonts/inter/inter-latin-ext.woff2) format("woff2");
+	unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+20A0-20CF,U+2C60-2C7F,U+A720-A7FF;
+}
+*/
+
+@font-face {
+	//font-family: 'inter', Helvetica, Arial, 'sans-serif';
+	font-family: 'inter';
+	font-weight: '100-900';
+	font-style: normal;
+	src: url('/assets/fonts/inter/inter.woff2') format('woff2');
+}
+
+@font-face {
+	//font-family: 'inter', Helvetica, Arial, 'sans-serif';
+	font-family: 'inter';
+	font-weight: '100-900';
+	font-style: oblique 0deg 9.4deg;
+	src: url('/assets/fonts/inter/inter.woff2') format('woff2');
 }
