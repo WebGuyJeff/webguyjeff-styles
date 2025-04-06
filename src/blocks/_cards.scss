@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *;
+
+.cards {
+	gap: $space_medium;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding: $space_medium;
+
+	.card {
+		@extend %box_decoration;
+
+		gap: $space_small;
+		display: flex;
+		flex-flow: column;
+		padding: $space_medium $space_small;
+		width: 20rem;
+
+		&>* {
+			margin: 0;
+		}
+
+		&_title {
+			font-size: $fontSize_XXXLarge;
+			line-height: 1;
+		}
+
+		&_subtitle {
+			font-size: $fontSize_large;
+			line-height: 1;
+		}
+
+		&:first-child,
+		&_body>*:first-child {
+			margin-block-start: 0;
+		}
+
+		&:last-child,
+		&_body>*:last-child {
+			margin-block-end: 0;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as *;
+
+.palette {
+	@extend %box_decoration;
+
+	display: grid;
+	grid-template-rows: repeat( 5, 5rem );
+	width: 8rem;
+	overflow: hidden;
+
+	.palette_yellow { background: $colour_yellow; }
+	.palette_pink   { background: $colour_pink;   }
+	.palette_green  { background: $colour_green;  }
+	.palette_black  { background: $colour_black;  }
+	.palette_white  { background: $colour_white;  }
+
+	&>*:not( :last-child ) { border-bottom: $border_thin; }
+}

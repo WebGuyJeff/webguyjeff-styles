@@ -40,8 +40,18 @@ $space_XXXLarge: 10rem;
 
 $animation_duration: 0.15s;
 
-$radius_small: 0.4em;
+$radius_small: 0.3em;
+$radius_medium: 0.6em;
+$radius_large: 0.9em;
 
-$border_thin: solid 0.125rem $colour_black;
-$border_medium: solid 0.25rem $colour_black; 
-$border_thick: solid 0.5rem $colour_black; 
+$border_thin: solid 0.2rem $colour_black;
+$border_medium: solid 0.3rem $colour_black; 
+$border_thick: solid 0.6rem $colour_black; 
+
+$box_shadow: 10px 10px 0 #000;
+
+%box_decoration {
+	border: $border_medium;
+	border-radius: $radius_medium;
+	box-shadow: $box_shadow;
+}
