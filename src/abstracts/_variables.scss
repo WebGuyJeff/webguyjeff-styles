@@ -1,5 +1,3 @@
-$globalPadding: .5em;
-
 $colour_black: #000;
 $colour_yellow: #feed01;
 $colour_pink: #ff64bf;
@@ -57,11 +55,16 @@ $box_shadow_raised: .825em .825em 0 #000;
 	border: $border_medium;
 	border-radius: $radius_medium;
 	box-shadow: $box_shadow;
+	// Let shadow take up space.
+	margin-inline-end: .625em;
+	margin-block-end: .625em;
 }
 
 %box_decoration-raised {
 	transform: translate(-0.2em, -0.2em);
-	border: $border_medium;
-	border-radius: $radius_medium;
 	box-shadow: $box_shadow_raised;
 }
+
+$globalPagePaddingX: $space_XSmall;
+$globalPagePaddingY: $space_large;
+$globalBlockSpacing: $space_medium;

@@ -1,3 +1,16 @@
+@use '../abstracts/variables' as *;
+
 :root {
 	scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+	width: 0.75rem;
+}
+body::-webkit-scrollbar-track {
+	background: $colour_black;
+}
+body::-webkit-scrollbar-thumb {
+	border-radius: 0.5rem;
+	background-color: $colour_yellow;
 }

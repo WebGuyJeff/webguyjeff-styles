@@ -20,7 +20,7 @@ input[type="file"]::before,
 	color: $colour_themeForeground;
     font-size: inherit;
     font-weight: bold;
-	transition: transform $animation_duration ease-in-out, 
+	transition: all $animation_duration ease-in-out,
 				box-shadow $animation_duration ease-in-out,
 				background $animation_duration ease-in-out;
 }

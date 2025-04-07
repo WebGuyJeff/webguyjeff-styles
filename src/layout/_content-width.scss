@@ -2,16 +2,14 @@
 
 .widthCopy {
 	width: 35em;
-	max-width: calc( 100% - $globalPadding * 2 );
+	max-width: calc( 100% - $globalPagePaddingX * 2 );
 }
 
 .widthWide {
 	width: 70em;
-	max-width: calc( 100% - $globalPadding * 2 );
+	max-width: calc( 100% - $globalPagePaddingX * 2 );
 }
 
 .widthFull {
-	margin-right: calc( $globalPadding * -1 );
-	margin-left: calc( $globalPadding * -1 );
 	width: 100%;
 }

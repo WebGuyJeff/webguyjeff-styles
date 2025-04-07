@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as *;
+
+.sideBar {
+	height: auto;
+	width: auto;
+	overflow: visible;
+
+	@media screen and (max-width: 1000px) {
+		display: none;
+	}
+
+	.sideBar_contents {
+		display: flex;
+		flex-flow: column;
+		align-items: stretch;
+		position: sticky;
+		top: $globalPagePaddingX;
+
+		&>* {
+			flex-grow: 1;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+
+
+:where( body >*:not(main) ) {
+	margin: 0;
+	padding: $globalPagePaddingX 1.5em;
+}
+
+:where( main >*:not(.widthFull) ) {
+	margin: 0 $globalPagePaddingX;
+	padding: 1.5em 0;
+}

@@ -6,7 +6,6 @@ body > footer {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-	margin-top: 1.5em;
 	border-top: $border_medium;
 
 	.footerMain {
@@ -16,16 +15,16 @@ body > footer {
 
 		a {
 			font-weight: 600;
-			background: none;
-
-			&:hover {
-				font-weight: 900;
-			}
 		}
 
 		.footerColumn {
 			@extend %flexColumn;
 			gap: $space_small;
+
+			&>* {
+				&:first-child { margin-block-start: 0; }
+				&:last-child { margin-block-end: 0; }
+			}
 		}
 	}
 

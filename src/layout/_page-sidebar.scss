@@ -1,0 +1,30 @@
+body.page_sidebar {
+	display: grid;
+	grid-template-areas: "header  header"
+	               "sidebar main"
+	               "footer  footer";
+	grid-template-columns: fit-content(12em) 1fr;
+
+	@media screen and (max-width: 1000px) {
+		grid-template-areas: "header"
+		                     "main"
+		                     "footer";
+		grid-template-columns: 1fr;
+	}
+
+	&>header {
+		grid-area: header;
+	}
+
+	&>main {
+		grid-area: main;
+	}
+
+	&>footer {
+		grid-area: footer;
+	}
+
+	&>div.sideBar {
+		grid-area: sidebar;
+	}
+}

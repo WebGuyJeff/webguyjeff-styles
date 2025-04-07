@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as *;
+
+body > header {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+
+	.header_label {
+		font-size: $fontSize_large;
+		line-height: 1.2;
+		margin-block-end: $space_medium;
+		font-weight: 900;
+		letter-spacing: -0.05em;
+		word-spacing: 0.25em;
+	}
+}

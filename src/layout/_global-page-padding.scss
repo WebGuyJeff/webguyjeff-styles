@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as *;
+
+// :where() keeps specificity at 0.
+
+// Base page layout elements.
+:where( body >* ) {
+	margin-block: 0;
+	margin-inline: 0;
+	padding-block: $globalPagePaddingY;
+	padding-inline: $globalPagePaddingX;
+}
