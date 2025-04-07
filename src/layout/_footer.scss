@@ -2,11 +2,16 @@
 @use '../abstracts/variables' as *;
 
 body > footer {
+	gap: $space_large;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
 	margin-top: 1.5em;
 	border-top: $border_medium;
 
 	.footerMain {
 		@extend %flexRow;
+		justify-content: space-between;
 		gap: $space_medium;
 
 		a {

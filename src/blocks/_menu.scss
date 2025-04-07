@@ -11,7 +11,8 @@
 		cursor: pointer;
 		padding: $space_small;
 		text-decoration: none;
-		color: inherit;
+		background: $colour_themeBackground;
+		color: $colour_themeForeground;
 		font-weight: bold;
 		transition: background-size .25s ease,
 		            background .25s ease;
@@ -31,21 +32,20 @@
 
 		&:where( .menu-bar > .menu_item, .menu_item .menu_item ) {
 			margin: 0;
-			background: $colour_themeForeground;
 			padding: $space_small;
-			color: $colour_themeBackground;
 			transition: color      $animation_duration ease-in-out,
 						background $animation_duration ease-in-out;
 
 			&:hover {
-				background: $colour_themeBackground;
-				color: $colour_themeForeground;
+				background: $colour_themeForeground;
+				color: $colour_themeBackground;
 				z-index: 1;
 			}
 		}
 	}
 
 	&-bar {
+		@extend %box_decoration;
 
 		.menu_item {
 			padding: $space_small;
@@ -142,6 +142,8 @@
 	}
 
 	&_contents {
+		@extend %box_decoration;
+
 		display: flex;
 		position: absolute;
 		left: 0;
@@ -151,8 +153,6 @@
 		opacity: 0;
 		z-index: 1;
 		margin: 0;
-		border-radius: $radius_small;
-		box-shadow: 0 5px 12px 3px #0005, 0 0 4px 1px #0005;
 		cursor: auto;
 		padding: 0;
 		min-width: 10em;

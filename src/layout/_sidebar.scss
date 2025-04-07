@@ -1,3 +1,26 @@
+body {
+	display: grid;
+	grid-template-areas: "header  header"
+	                     "sidebar main"
+	                     "footer  footer";
+
+	&>header {
+		grid-area: header;
+	}
+
+	&>main {
+		grid-area: main;
+	}
+
+	&>footer {
+		grid-area: footer;
+	}
+
+	&>div.sideBar {
+		grid-area: sidebar;
+	}
+}
+
 .sideBar {
 	position: sticky;
 	top: 1.5rem;

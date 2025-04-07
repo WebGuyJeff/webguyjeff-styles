@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+
+
+:where( body >*:not(main) ) {
+	margin: 0;
+	padding: $globalPadding 1.5em;
+}
+
+main {
+	margin: 0 $globalPadding;
+	padding: 1.5em 0;
+}

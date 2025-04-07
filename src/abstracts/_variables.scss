@@ -1,3 +1,5 @@
+$globalPadding: .5em;
+
 $colour_black: #000;
 $colour_yellow: #feed01;
 $colour_pink: #ff64bf;
@@ -48,10 +50,18 @@ $border_thin: solid 0.2rem $colour_black;
 $border_medium: solid 0.3rem $colour_black; 
 $border_thick: solid 0.6rem $colour_black; 
 
-$box_shadow: 10px 10px 0 #000;
+$box_shadow: .625em .625em 0 #000;
+$box_shadow_raised: .825em .825em 0 #000;
 
 %box_decoration {
 	border: $border_medium;
 	border-radius: $radius_medium;
 	box-shadow: $box_shadow;
+}
+
+%box_decoration-raised {
+	transform: translate(-0.2em, -0.2em);
+	border: $border_medium;
+	border-radius: $radius_medium;
+	box-shadow: $box_shadow_raised;
 }

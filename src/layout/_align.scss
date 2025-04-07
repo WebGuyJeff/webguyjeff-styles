@@ -1,0 +1,29 @@
+.alignLeft {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.alignRight {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.alignCentre {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+:where( .alignContentLeft >* ) {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+:where( .alignContentRight  >* ){
+	margin-left: 0;
+	margin-right: auto;
+}
+
+:where( .alignContentCentre  >* ) {
+	margin-left: auto;
+	margin-right: auto;
+}

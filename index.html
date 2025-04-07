@@ -87,71 +87,73 @@
 
 	</header>
 
-	<main>
-
-		<aside class="sideBar">
-			<nav class="menu menu-bar menu-bar--column">
-				<a class="menu_item" href="#cards">Cards</a>
-				<a class="menu_item" href="#headings">Headings</a>
-				<a class="menu_item" href="#link">Links</a>
-				<a class="menu_item" href="#list">Lists</a>
-				<a class="menu_item" href="#form">Forms</a>
-				<div class="dropdown dropdown-up menu_item">
-					<label class="dropdown_toggle" title="More">
-						Dropup
-						<span class="dropdown_toggleIcon"></span>
-						<input class="dropdown_checkbox" type="checkbox">
-					</label>
-					<div class="dropdown_contents">
-						<a class="menu_item" href="#button">Buttons</a>
-						<a class="menu_item" href="#article">Article</a>
-						<a class="menu_item" href="#blockquote">Blockquote</a>
-					</div>
+	<aside class="sideBar alignLeft">
+		<nav class="menu menu-bar menu-bar--column">
+			<a class="menu_item" href="#cards">Cards</a>
+			<a class="menu_item" href="#headings">Headings</a>
+			<a class="menu_item" href="#link">Links</a>
+			<a class="menu_item" href="#list">Lists</a>
+			<a class="menu_item" href="#form">Forms</a>
+			<div class="dropdown dropdown-up menu_item">
+				<label class="dropdown_toggle" title="More">
+					Dropup
+					<span class="dropdown_toggleIcon"></span>
+					<input class="dropdown_checkbox" type="checkbox">
+				</label>
+				<div class="dropdown_contents">
+					<a class="menu_item" href="#button">Buttons</a>
+					<a class="menu_item" href="#article">Article</a>
+					<a class="menu_item" href="#blockquote">Blockquote</a>
 				</div>
-				<div class="dropdown menu_item">
-					<label class="dropdown_toggle" title="More">
-						Dropdown
-						<span class="dropdown_toggleIcon"></span>
-						<input class="dropdown_checkbox" type="checkbox">
-					</label>
-					<div class="dropdown_contents">
-						<a class="menu_item" href="#pre">Pre</a>
-						<a class="menu_item" href="#progress">Progress</a>
-						<a class="menu_item" href="#othertypography">Other Typography</a>
-
-						<div class="dropdown menu_item">
-							<label class="dropdown_toggle" title="More">
-								Dropdown
-								<span class="dropdown_toggleIcon"></span>
-								<input class="dropdown_checkbox" type="checkbox">
-							</label>
-							<div class="dropdown_contents">
-								<a class="menu_item" href="#figure">Figure</a>
-								<a class="menu_item" href="#table">Table</a>
-							</div>
-						</div>
-						<a class="menu_item" href="#footer">Footer</a>
-					</div>
-				</div>
-			</nav>
-
-			<div class="palette">
-				<div class="palette_yellow"></div>
-				<div class="palette_pink"></div>
-				<div class="palette_green"></div>
-				<div class="palette_black"></div>
-				<div class="palette_white"></div>
 			</div>
-		</aside>
+			<div class="dropdown menu_item">
+				<label class="dropdown_toggle" title="More">
+					Dropdown
+					<span class="dropdown_toggleIcon"></span>
+					<input class="dropdown_checkbox" type="checkbox">
+				</label>
+				<div class="dropdown_contents">
+					<a class="menu_item" href="#pre">Pre</a>
+					<a class="menu_item" href="#progress">Progress</a>
+					<a class="menu_item" href="#othertypography">Other Typography</a>
 
-		<div class="contentContainer">
+					<div class="dropdown menu_item">
+						<label class="dropdown_toggle" title="More">
+							Dropdown
+							<span class="dropdown_toggleIcon"></span>
+							<input class="dropdown_checkbox" type="checkbox">
+						</label>
+						<div class="dropdown_contents">
+							<a class="menu_item" href="#figure">Figure</a>
+							<a class="menu_item" href="#table">Table</a>
+						</div>
+					</div>
+					<a class="menu_item" href="#footer">Footer</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="palette">
+			<div class="palette_yellow"></div>
+			<div class="palette_pink"></div>
+			<div class="palette_green"></div>
+			<div class="palette_black"></div>
+			<div class="palette_white"></div>
+		</div>
+	</aside>
+
+	<main class="alignContentCentre">
+
+		<div class="widthCopy">
 			<hr />
 		</div>
 
 		<section id="cards">
-			<h2>Cards</h2>
+			<div class="widthCopy alignCentre">
+				<h2>Cards</h2>
+			</div>
 
-			<div class="cards">
+			<div class="cards widthFull">
 				<div class="card">
 					<h3 class="card_title">Card Title</h3>
 					<hr />
@@ -192,7 +194,7 @@
 
 		</section>
 
-		<div class="contentContainer">
+		<div class="widthCopy">
 
 			<hr />
 
@@ -680,8 +682,8 @@ Highlight the CLI text and press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kb
 		</div>
 	</main>
 
-	<footer id="footer">
-		<div class="footerMain contentContainer">
+	<footer id="footer" class="footerMain widthFull">
+		<div class="footerMain widthWide">
 			<nav class="footerColumn">
 				<h3>Pages</h3>
 				<a href="#">Home</a>
@@ -697,7 +699,7 @@ Highlight the CLI text and press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kb
 				<a href="http://github.com/" title=" on Github">Github</a>
 			</nav>
 		</div>
-		<div class="footerLinks contentContainer">
+		<div class="footerLinks widthWide">
 			<address>email@email.com</address>
 			<small>© Awesome Company</small>
 		</div>

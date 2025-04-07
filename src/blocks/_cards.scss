@@ -5,7 +5,7 @@
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	padding: $space_medium;
+	padding: 0 $space_medium;
 
 	.card {
 		@extend %box_decoration;

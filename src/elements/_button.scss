@@ -6,14 +6,16 @@ input[type="submit"],
 input[type="reset"],
 input[type="file"]::before,
 .button {
+	@extend %box_decoration;
+
     display: inline-block;
-    margin: 0.4em;
+    margin-block-start: $space_small;
+	margin-block-end: $space_small;
+	margin-inline-end: $space_small;
 	outline: none;
-	border: solid 1px $colour_grey;
-    border-radius: $radius_small;
 	background: $colour_green, $colour_grey;
 	cursor: pointer;
-    padding: $space_XSmall;
+    padding: $space_small;
 	text-decoration: none;
 	color: $colour_themeForeground;
     font-size: inherit;
@@ -28,9 +30,7 @@ input[type="file"]::before,
 	input[type="reset"]:hover,
 	input[type="file"]:hover::before,
 	.button:hover {
-		transform: translate(0.2em, -0.2em);
-		box-shadow: -0.2em 0.2em 0 0 #000;
-		background: $colour_greyLight;
+		@extend %box_decoration-raised;
 		z-index: 1;
 	}
 	button:active,
@@ -39,8 +39,6 @@ input[type="file"]::before,
 	input[type="reset"]:active,
 	input[type="file"]:active::before,
 	.button:active {
-		transform: translate(0, 0);
-		box-shadow: 0 0 0 0 #000;
 		background: $colour_themeGo;
 	}
 
