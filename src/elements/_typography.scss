@@ -52,6 +52,18 @@ li:last-child {
 	margin-block-end: 0;
 }
 
+ul.listStyle-none,
+ol.listStyle-none {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		margin-inline: 0;
+		padding: 0;
+	}
+}
+
 blockquote {
 	margin-inline-end: $space_medium;
 	margin-inline-start: $space_medium;
@@ -99,7 +111,7 @@ sup {
 }
 
 pre {
-    border-radius: $radius_small;
+    border-radius: $radius_medium;
 	padding: 0.8em;
 	overflow-x: auto;
 }

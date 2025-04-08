@@ -1,9 +1,11 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/box-decoration' as *;
 
 button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
+input[type="image"],
 input[type="file"]::before,
 .button {
 	@extend %box_decoration_small;
@@ -13,7 +15,7 @@ input[type="file"]::before,
 	margin-inline-end: $space_small;
     display: inline-block;
 	outline: none;
-	background: $colour_green, $colour_grey;
+	background: $colour_yellowish;
 	cursor: pointer;
     padding: $space_small $space_medium;
 	text-transform: uppercase;
@@ -46,6 +48,7 @@ input[type="file"]::before,
 /* custom file selection button */
 input[type="file"]::file-selector-button {
 	visibility: hidden;
+	width: 0;
 }
 input[type="file"]::before {
 	content: 'Select file...';

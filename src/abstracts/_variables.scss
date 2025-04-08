@@ -1,8 +1,11 @@
 $colour_black: #000;
 $colour_yellow: #feed01;
+$colour_yellowish: #fefddf;
 $colour_pink: #ff64bf;
+$colour_pinkish: #ffe0f2;
 $colour_green: #06b8ba;
-$colour_white: #fff;
+$colour_greenish: #d7fdfe;
+$colour_white: #fafaf8;
 $colour_grey: #ccc;
 $colour_greyLight: #eee;
 $colour_themeBackground: $colour_yellow;
@@ -45,42 +48,13 @@ $radius_medium: 0.6em;
 $radius_large: 0.9em;
 
 $border_thin: solid 0.2rem $colour_black;
-$border_medium: solid 0.3rem $colour_black; 
-$border_thick: solid 0.6rem $colour_black; 
+$border_medium: solid 0.3rem $colour_black;
+$border_thick: solid 0.6rem $colour_black;
 
-
-$box_shadow_small: .3125em .3125em 0 #000;
-$box_shadow_small-raised: .5125em .5125em 0 #000;
-$box_shadow_large: .625em .625em 0 #000;
-$box_shadow_large-raised: .825em .825em 0 #000;
-
-%box_decoration_small {
-	border: $border_thin;
-	border-radius: $radius_medium;
-	box-shadow: $box_shadow_small;
-	// Let shadow take up space.
-	margin-inline-end: .3125em;
-	margin-block-end: .3125rem;
-}
-
-%box_decoration_small-raised {
-	transform: translate(-0.2em, -0.2em);
-	box-shadow: $box_shadow_small-raised;
-}
-
-%box_decoration_large {
-	border: $border_medium;
-	border-radius: $radius_medium;
-	box-shadow: $box_shadow_large;
-	// Let shadow take up space.
-	margin-inline-end: .625em;
-	margin-block-end: .625em;
-}
-
-%box_decoration_large-raised {
-	transform: translate(-0.2em, -0.2em);
-	box-shadow: $box_shadow_large-raised;
-}
+$shadow_small: .3125em .3125em 0 $colour_black;
+$shadow_small-raised: .5125em .5125em 0 $colour_black;
+$shadow_large: .625em .625em 0 $colour_black;
+$shadow_large-raised: .825em .825em 0 $colour_black;
 
 $globalPagePaddingX: $space_XSmall;
 $globalPagePaddingY: $space_large;

@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/box-decoration' as *;
 
 .cards {
 	gap: $space_medium;

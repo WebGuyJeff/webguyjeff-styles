@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/box-decoration' as *;
 
 .menu {
 	margin-block: $space_small;
@@ -57,7 +58,7 @@
 		}
 
 		&--row {
-			flex-flow: row;
+			flex-flow: row wrap;
 
 			.menu_item:first-child {
 				border-radius: $radius_small 0 0 $radius_small;
@@ -128,6 +129,7 @@
 			& ~ .dropdown_contents {
 				visibility: visible;
 				opacity: 1;
+				width: max-content;
 			}
 		}
 	}
@@ -160,7 +162,8 @@
 		margin: 0;
 		cursor: auto;
 		padding: 0;
-		min-width: 10em;
+		width: 1px; // Prevent viewport overflow when hidden.
+		max-width: 80vw;
 
 		.dropdown_contents {
 			top: 0;
@@ -198,6 +201,7 @@
 		&:hover {
 			visibility: visible;
 			opacity: 1;
+			width: max-content;
 		}
 	}
 }

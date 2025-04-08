@@ -1,0 +1,31 @@
+
+
+@use './variables' as *;
+
+%box_decoration_small {
+	border: $border_thin;
+	border-radius: $radius_medium;
+	box-shadow: $shadow_small;
+	// Let shadow take up space.
+	margin-inline-end: .3125em;
+	margin-block-end: .3125rem;
+}
+
+%box_decoration_small-raised {
+	transform: translate(-0.2em, -0.2em);
+	box-shadow: $shadow_small-raised;
+}
+
+%box_decoration_large {
+	border: $border_medium;
+	border-radius: $radius_medium;
+	box-shadow: $shadow_large;
+	// Let shadow take up space.
+	margin-inline-end: .625em;
+	margin-block-end: .625em;
+}
+
+%box_decoration_large-raised {
+	transform: translate(-0.2em, -0.2em);
+	box-shadow: $shadow_large-raised;
+}

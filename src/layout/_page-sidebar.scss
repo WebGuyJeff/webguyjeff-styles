@@ -12,6 +12,11 @@ body.page_sidebar {
 		grid-template-columns: 1fr;
 	}
 
+	// Stop grid children overflowing.
+	&>* {
+		min-width: 0;
+	}
+
 	&>header {
 		grid-area: header;
 	}

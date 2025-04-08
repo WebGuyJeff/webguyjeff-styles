@@ -14,18 +14,139 @@ input[type="password"],
 input[type="search"],
 input[type="tel"],
 input[type="text"],
-textarea,
 input[type="time"],
 input[type="url"],
-input[type="week"] {
+input[type="week"],
+input[type="color"],
+select,
+textarea {
 	margin-block: 0.2em;
-	border: none;
-	border-radius: $radius_small;
-	box-shadow: inset -1px 1px 3px 0px $colour_black;
+	border: $border_thin;
+	border-radius: $radius_medium;
 	padding: $space_XSmall;
-	height: 1.4em;
+	background-color: $colour_white;
 }
 
-fieldset {
+input[type="file"] > span {
+		width:fit-content;
+}
+
+input[type="color"] {
+	padding: 0;
+	height: 2em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	-webkit-appearance: none;
+	appearance: none;
+	place-content: center;
+	display: grid;
+	margin: 0;
 	border: $border_thin;
+	border-radius: 50%;
+	background-color: $colour_white;
+	padding: 0.8em;
+	width: 1em;
+	height: 1em;
+	color: currentColor;
+	font: inherit;
+
+	&:before {
+		content: "";
+		transform: scale(0);
+		transform-origin: center center;
+		transition: $animation_duration transform ease-in-out;
+		box-shadow: inset 1em 1em $colour_black;
+		width: 0.8em;
+		height: 0.8em;
+
+		/* Windows High Contrast Mode */
+		background-color: CanvasText;
+	}
+
+	&:checked::before {
+		transform: scale(1);
+	}
+}
+
+input[type="checkbox"] {
+	border-radius: $radius_small;
+
+	&:before {
+		clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+	}
+}
+
+input[type="radio"] {
+	border-radius: 50%;
+
+	&:before {
+		clip-path: circle(45%);
+	}
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	cursor: pointer;
+	width: 15rem;
+
+	&:focus {
+		outline: none;
+	}
+
+	/**** Track ****/
+
+	/* Chrome, Safari, Opera, and Edge Chromium */
+	&::-webkit-slider-runnable-track {
+		border: $border_thin;
+		background: $colour_green;
+		height: 0.75em;
+	}
+
+	/* Firefox */
+	&::-moz-range-track {
+		border: $border_thin;
+		background: $colour_green;
+		height: 0.75em;
+	}
+
+	/**** Thumb ****/
+
+	/* Chrome, Safari, Opera, and Edge Chromium */
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none; /* Override default look */
+		appearance: none;
+		margin-top: -0.5625em; /* Centers thumb on the track */
+		border: $border_thin;
+		background-color: $colour_yellow;
+		height: 1.5em;
+		width: 1em;    
+	}
+
+	/* Firefox */
+	&::-moz-range-thumb {
+		border: none; /*Removes extra border that FF applies*/
+		border-radius: 0; /*Removes default border-radius that FF applies*/
+		border: $border_thin;
+		background-color: $colour_yellow;
+		height: 1.5em;
+		width: 1em;
+	}
+
+	/**** Focus ****/
+
+	/* Chrome, Safari, Opera, and Edge Chromium */
+	&:focus::-webkit-slider-thumb {
+		outline: $border_thin;
+		outline-offset: 0.125em;
+	}
+	
+	/* Firefox */
+	&:focus::-moz-range-thumb {
+		outline: $border_thin;
+		outline-offset: 0.125em;     
+	}
 }

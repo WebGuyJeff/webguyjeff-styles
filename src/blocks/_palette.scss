@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/box-decoration' as *;
 
 .palette {
 	@extend %box_decoration_large;
