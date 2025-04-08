@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as *;
 
 .palette {
-	@extend %box_decoration;
+	@extend %box_decoration_large;
 
 	display: grid;
 	grid-template-rows: repeat( 5, 5rem );

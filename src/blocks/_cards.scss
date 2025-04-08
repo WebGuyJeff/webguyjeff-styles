@@ -8,7 +8,7 @@
 	padding-block: $space_large;
 
 	.card {
-		@extend %box_decoration;
+		@extend %box_decoration_large;
 
 		gap: $space_small;
 		display: flex;

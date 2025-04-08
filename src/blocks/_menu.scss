@@ -50,7 +50,7 @@
 	}
 
 	&-bar {
-		@extend %box_decoration;
+		@extend %box_decoration_large;
 
 		.menu_item {
 			padding: $space_small;
@@ -147,7 +147,7 @@
 	}
 
 	&_contents {
-		@extend %box_decoration;
+		@extend %box_decoration_large;
 
 		display: flex;
 		position: absolute;
