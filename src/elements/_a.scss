@@ -2,17 +2,17 @@
 
 a {
 	transition: background-size $animation_duration ease;
-	background: $animation_duration ease;
-	background-image: linear-gradient(to right, #0000 4.999%, $colour_themeForeground 5%, $colour_themeForeground 95%, #0000 95.001%);
+	background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
 	background-position: 0 100%;
 	background-repeat: no-repeat;
-	background-size: 100% 5%;
+	background-size: 100% 0.15em;
 	cursor: pointer;
 	text-decoration: none;
-	text-decoration: none;
 	color: inherit;
+	margin-block-end: -0.15em;
+	padding-block-end: 0.15em;
 
 	&:hover {
-		background-size: 100% 15%;
+		background-size: 100% 0.3em;
 	}
 }

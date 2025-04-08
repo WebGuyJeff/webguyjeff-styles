@@ -2,6 +2,8 @@
 
 :root {
 	scroll-behavior: smooth;
+	scrollbar-color: $colour_yellow $colour_black;
+	scrollbar-width: auto;
 }
 
 body::-webkit-scrollbar {

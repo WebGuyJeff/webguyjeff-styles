@@ -20,6 +20,7 @@ body > footer {
 		.footerColumn {
 			@extend %flexColumn;
 			gap: $space_small;
+			align-items: flex-start;
 
 			&>* {
 				&:first-child { margin-block-start: 0; }

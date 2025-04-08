@@ -1,19 +1,16 @@
 $colour_black: #000;
+$colour_white: #fafaf8;
 $colour_yellow: #feed01;
-$colour_yellowish: #fefddf;
+$colour_yellowish: #f5f4d0;
 $colour_pink: #ff64bf;
 $colour_pinkish: #ffe0f2;
 $colour_green: #06b8ba;
 $colour_greenish: #d7fdfe;
-$colour_white: #fafaf8;
+$colour_red: #e72e2e;
 $colour_grey: #ccc;
 $colour_greyLight: #eee;
 $colour_themeBackground: $colour_yellow;
 $colour_themeForeground: $colour_black;
-$colour_themeEmphasis: $colour_themeForeground;
-$colour_themeGo: $colour_green;
-$colour_themeStop: red;
-$colour_themeReady: $colour_yellow;
 
 /**
  * Fluid font sizes adjust between 400px and 1920px viewport width.
@@ -33,13 +30,13 @@ $fontSize_displayMedium: clamp(2.5658rem, 1.968rem + 2.3911vw, 4.8373rem);
 $fontSize_displayLarge: clamp(2.8865rem, 2.1185rem + 3.0718vw, 5.8048rem);
 $fontSize_displayXLarge: clamp(3.2473rem, 2.2688rem + 3.9141vw, 6.9657rem);
 
-$space_XSmall: 0.5rem;
-$space_small: 1rem;
-$space_medium: 2rem;
-$space_large: 3.5rem;
-$space_XLarge: 6rem;
-$space_XXlarge: 7.5rem;
-$space_XXXLarge: 10rem;
+$space_XSmall: 0.5em;
+$space_small: 1em;
+$space_medium: 2em;
+$space_large: 3.5em;
+$space_XLarge: 6em;
+$space_XXlarge: 7.5em;
+$space_XXXLarge: 10em;
 
 $animation_duration: 0.15s;
 

@@ -5,8 +5,8 @@ body { font-family: "Inter"; }
 h1,h2,h3,h4,h5,h6 {
 	line-height: 1.6;
 	font-weight: 900;
-	margin-block-start: 1.2em;
-	margin-block-end: 0.8em;
+	margin-block-start: $space_small;
+	margin-block-end: $space_XSmall;
 	margin-inline-start: 0;
 	margin-inline-end: 0;
 
@@ -39,17 +39,58 @@ h2+h3 {
 	margin-block-start: 0;
 }
 
+blockquote {
+	margin-inline-end: $space_medium;
+	margin-inline-start: 0;
+	padding-inline-start: $space_medium;
+	position: relative;
+	border-left: $border_medium;
+	color: inherit;
+
+	&:last-child {
+		margin-block-end: 0;
+	}
+}
+
+i,
+address,
+blockquote,
+dfn,
+em,
+var {
+	font-style: oblique 10deg;
+}
+
+p,
+ul,
+ol,
+blockquote,
+pre,
+dl,
+img {
+	margin-block-end: $space_medium;
+}
+
 ul,
 ol {
-	margin-inline-start: 1.875em; /*30px*/
+	margin-inline-start: $space_small;
+
+	li {
+		margin-block-end: $space_small;
+	
+		&:last-child {
+			margin-block-end: 0;
+		}
+	}
 }
 
-li {
-	margin-bottom: .75em; /*12px*/
-}
-
-li:last-child {
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+	margin-block-start: $space_small;
 	margin-block-end: 0;
+	margin-inline-start: $space_small;
 }
 
 ul.listStyle-none,
@@ -64,89 +105,45 @@ ol.listStyle-none {
 	}
 }
 
-blockquote {
-	margin-inline-end: $space_medium;
-	margin-inline-start: $space_medium;
-	position: relative;
-	padding-left: $space_medium;
-	color: inherit;
-
-	p:first-child:before {
-		display: block;
-		position: absolute;
-		top: -.8em;
-		left: -.4em;
-		transform: rotate( -15deg );
-		margin-right: 1.1875em;
-		font-size: 360%;
-		content: '\2760'
-	}
-}
-
-p,
-ul,
-ol,
-blockquote,
-pre,
-img {
-	margin-block-end: 1.875em; /*30px*/
-}
-
-ul ul,
-ul ol,
-ol ul,
-ol ol {
-	margin-block-start: 0.75em; /*12px*/
-	margin-block-end: 0;
-	margin-inline-start: 1.1875em; /*19px*/
-}
-
-blockquote> :last-child {
-	margin-block-end: 0;
-}
-
 sub,
 sup {
-	color: #828282;
+	color: inherit;
 }
 
-pre {
+pre:has(code),
+pre:has(samp) {
     border-radius: $radius_medium;
-	padding: 0.8em;
-	overflow-x: auto;
-}
-
-samp,
-code,
-pre {
 	background-color: $colour_black;
-	color: $colour_white;
-}
-
-samp,
-code,
-pre,
-kbd {
+	padding: $space_XSmall;
+	overflow-x: auto;
 	line-height: 1.4;
-	font-size: $fontSize_base;
+	color: $colour_white;
+	font-size: inherit;
 }
 
 kbd {
-    margin: 0 1px;
-    border: 1px solid #cccccc;
+    margin: 0 0.1em;
+    border: 0.1em solid #cccccc;
     border-radius: $radius_small;
-    box-shadow: 0 1px 0 rgb(0 0 0 / 20%), 0 0 0 1px #fafafa inset, 0 0 0 1px white inset;
-    background-color: #f7f7f7;
+    box-shadow: 0 0.05em 0.05em #000000cc, 0 0.1em 0.1em #00000066, 0 0.02em 0 0.02em #ececec inset, 0 0.04em 0 0.04em #fafafa inset;
+    background-color: #e0e0e0;
     padding: 0.2em 0.4em;
-    text-shadow: 0 1px 0 white;
-    color: #000;
+	line-height: 1.4;
+    color: $colour_black;
+	font-family: monospace;
+	font-size: inherit;
 }
 
-i,
-address,
-blockquote,
-dfn,
-em,
-var {
-	font-style: oblique 10deg;
+dl {
+	&>dt {
+		font-weight: 700;
+		margin-block-start: 0;
+		margin-block-end: $space_XSmall;
+	}
+
+	&>dd {
+		margin-block-start: 0;
+		margin-block-end: $space_medium;
+		margin-inline-start: $space_medium;
+	}
 }

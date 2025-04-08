@@ -1,17 +1,19 @@
 @use '../abstracts/variables' as *;
 
 figure {
-    background-color: $colour_grey;
+    background-color: $colour_themeForeground;
+	color: $colour_themeBackground;
     border-radius: $radius_medium;
     overflow: hidden;
     padding: 0;
-    margin: 1em 2em;
+	margin: 1em 0;
 
 	img {
 		margin: 0;
 	}
 
 	figcaption {
+		font-weight: 800;
 		margin: $space_XSmall 0.4em;
 		text-align: center;
 	}

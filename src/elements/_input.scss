@@ -32,6 +32,7 @@ input[type="file"] > span {
 }
 
 input[type="color"] {
+	border-radius: $radius_small;
 	padding: 0;
 	height: 2em;
 }
@@ -46,7 +47,7 @@ input[type="radio"] {
 	border: $border_thin;
 	border-radius: 50%;
 	background-color: $colour_white;
-	padding: 0.8em;
+	padding: 0.6em;
 	width: 1em;
 	height: 1em;
 	color: currentColor;
@@ -89,6 +90,7 @@ input[type="radio"] {
 input[type="range"] {
 	-webkit-appearance: none;
 	appearance: none;
+	margin: 0;
 	background: transparent;
 	cursor: pointer;
 	width: 15rem;
@@ -102,6 +104,7 @@ input[type="range"] {
 	/* Chrome, Safari, Opera, and Edge Chromium */
 	&::-webkit-slider-runnable-track {
 		border: $border_thin;
+		border-radius: $radius_small;
 		background: $colour_green;
 		height: 0.75em;
 	}
@@ -109,6 +112,7 @@ input[type="range"] {
 	/* Firefox */
 	&::-moz-range-track {
 		border: $border_thin;
+		border-radius: $radius_small;
 		background: $colour_green;
 		height: 0.75em;
 	}
@@ -121,19 +125,21 @@ input[type="range"] {
 		appearance: none;
 		margin-top: -0.5625em; /* Centers thumb on the track */
 		border: $border_thin;
-		background-color: $colour_yellow;
-		height: 1.5em;
+		border-radius: $radius_small;
+		background-color: $colour_greenish;
 		width: 1em;    
+		height: 1.5em;
 	}
 
 	/* Firefox */
 	&::-moz-range-thumb {
 		border: none; /*Removes extra border that FF applies*/
-		border-radius: 0; /*Removes default border-radius that FF applies*/
 		border: $border_thin;
-		background-color: $colour_yellow;
-		height: 1.5em;
+		border-radius: 0; /*Removes default border-radius that FF applies*/
+		border-radius: $radius_small;
+		background-color: $colour_greenish;
 		width: 1em;
+		height: 1.5em;
 	}
 
 	/**** Focus ****/
@@ -148,5 +154,32 @@ input[type="range"] {
 	&:focus::-moz-range-thumb {
 		outline: $border_thin;
 		outline-offset: 0.125em;     
+	}
+}
+
+
+progress {
+	margin: 0;
+	border-radius: $radius_small;
+	width: 15rem;
+
+	&::-webkit-progress-bar {
+		border: $border_thin;
+		border-radius: $radius_small;
+		background: $colour_greenish;
+		height: 0.75em;
+		overflow: hidden;
+	}
+
+	&::-moz-progress-bar {
+		border: $border_thin;
+		border-radius: $radius_small;
+		background: $colour_greenish;
+		height: 0.75em;
+		overflow: hidden;
+	}
+
+	&::-webkit-progress-value {
+		background-color: $colour_green;
 	}
 }

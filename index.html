@@ -41,7 +41,6 @@
 				</label>
 				<div class="dropdown_contents">
 					<a class="menu_item" href="#pre">Pre</a>
-					<a class="menu_item" href="#progress">Progress</a>
 					<a class="menu_item" href="#othertypography">Other Typography</a>
 					<a class="menu_item" href="#figure">Figure</a>
 					<a class="menu_item" href="#table">Table</a>
@@ -80,7 +79,6 @@
 					</label>
 					<div class="dropdown_contents">
 						<a class="menu_item" href="#pre">Pre</a>
-						<a class="menu_item" href="#progress">Progress</a>
 						<a class="menu_item" href="#othertypography">Other Typography</a>
 
 						<div class="dropdown menu_item">
@@ -163,8 +161,6 @@
 
 		<div class="widthCopy">
 
-			<hr />
-
 			<section id="headings">
 				<h1>H1 Heading</h1>
 				<p>
@@ -175,7 +171,7 @@
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					quis nostrud <a href="#">exercitation ullamco</a> laboris nisi ut aliquip ex ea commodo
 					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 					non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -213,15 +209,11 @@
 				</p>
 			</section>
 
-			<hr />
-
 			<section>
 				<h2 id="link">Link</h2>
-				<a href="#">Sample text link</a>
-				<a href="#">Sample button link</a>
+				<p><a href="#">Text link</a></p>
+				<a href="#" class="button">button link</a>
 			</section>
-
-			<hr />
 
 			<section>
 				<h2 id="list">List</h2>
@@ -289,8 +281,6 @@
 				</dl>
 			</section>
 
-			<hr />
-
 			<section>
 				<h2 id="form">Form and Input</h2>
 				<form>
@@ -342,10 +332,12 @@
 						<input type="color" id="color">
 						<label>hidden</label>
 						<div><input type="hidden"></div>
-						<label>image</label>
-						<input type="image">
 						<label>range</label>
 						<input type="range">
+						<label>progress</label>
+						<progress value="80" max="100">80 %</progress>
+						<label>image</label>
+						<input type="image">
 						<label>file</label>
 						<input type="file">
 						<label>button</label>
@@ -358,18 +350,14 @@
 				</form>
 			</section>
 
-			<hr />
-
 			<section>
 				<h2 id="button">Buttons</h2>
 				<button>Base button</button>
-				<button class="button indicate-emphasis">button-emphasis</button>
-				<button class="button indicate-go">button-go</button>
-				<button class="button indicate-stop">button-stop</button>
-				<button class="button indicate-ready">button-ready</button>
+				<button class="button button-outline">button outline</button>
+				<button class="button button-emphasis">button emphasis</button>
+				<button class="button button-go">button go</button>
+				<button class="button button-stop">button stop</button>
 			</section>
-
-			<hr />
 
 			<section>
 				<h2 id="article">An Example Article</h2>
@@ -405,6 +393,9 @@
 						in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
 						fuga. Et harum quidem rerum facilis est et expedita distinctio.
 					</p>
+
+					<h2>Horizontal Rule</h2>
+					<hr />
 
 					<ul>
 					  <li><address>Address</address></li>
@@ -452,8 +443,6 @@
 				</article>
 			</section>
 
-			<hr />
-
 			<section>
 				<h2 id="pre">Preformatted Text</h2>
 				<p>
@@ -492,55 +481,36 @@
 					</tbody>
 				</table>
 
-				<h4>&lt;pre&gt;&lt;code&gt; block code that musn't wrap.</h4>
-				<pre>
-					<code>
-sudo apt update
+				<h4>Code that musn't wrap.</h4>
+				<p><b>Tag: </b><code>&lt;pre&gt;&lt;code&gt;</code></p>
+<pre><code>sudo apt update
 sudo apt install python3-pip
 sudo apt install python3-venv
-sudo apt list --installed | grep python3
-					</code>
-				</pre>
+sudo apt list --installed | grep python3</code></pre>
 
-				<h4>&lt;code&gt; inline code that can wrap.</h4>
-				<code>
-* */1 * * * tail -500 /home/$(whoami)/.xsession-errors > /home/$(whoami)/.xsession-errors
-				</code>
+				<h4>Inline code that can wrap.</h4>
+				<p><b>Tag: </b><code>&lt;code&gt;</code></p>
+				<code>* */1 * * * tail -500 /home/$(whoami)/.errors > /home/$(whoami)/.errors</code>
 
-				<h4>&lt;pre&gt;&lt;samp&gt; block output that musn't wrap.</h4>
-				<pre>
-					<samp>
-libunistring2/stable,now 0.9.10-4 amd64 [installed]
+				<h4>Output that musn't wrap.</h4>
+				<p><b>Tag: </b><code>&lt;pre&gt;&lt;samp&gt;</code></p>
+<pre><samp>libunistring2/stable,now 0.9.10-4 amd64 [installed]
 libuno-cppu3/stable,stable-security,now 1:7.0.4-4+deb11u1 amd64 [installed,automatic]
 libuno-cppuhelpergcc3-3/stable,stable-security,now 1:7.0.4-4+deb11u1 amd64 [installed,automatic]
 libuno-purpenvhelpergcc3-3/stable,stable-security,now 1:7.0.4-4+deb11u1 amd64 [installed,automatic]
 libuno-sal3/stable,stable-security,now 1:7.0.4-4+deb11u1 amd64 [installed,automatic]
 libuno-salhelpergcc3-3/stable,stable-security,now 1:7.0.4-4+deb11u1 amd64 [installed,automatic]
-libunoloader-java/stable,stable-security,now 1:7.0.4-4+deb11u1 all [installed,automatic]
-					</samp>
-				</pre>
+libunoloader-java/stable,stable-security,now 1:7.0.4-4+deb11u1 all [installed,automatic]</samp></pre>
 
-				<h4>&lt;samp&gt; inline output that can wrap.</h4>
-				<samp>
-					WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-				</samp>
+				<h4>Inline output that can wrap.</h4>
+				<p><b>Tag: </b><code>&lt;samp&gt;</code></p>
+				<p><samp>WARNING: apt does not have a stable CLI interface. Use with caution in scripts.</samp></p>
 
-				<h4>&lt;kbd&gt; User input.</h4>
-				<pre>
-Highlight the CLI text and press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> to copy.
-				</pre>
+				<h4>User input.</h4>
+				<p><b>Tag: </b><code>&lt;kbd&gt;</code></p>
+				<p>Highlight the CLI text and press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> to copy.</p>
 
 			</section>
-
-			<hr />
-
-			<section>
-				<h2 id="progress">Progress Bar</h2>
-				<progress value="80" max="100">80 %</progress>
-				<p>12 seconds</p>
-			</section>
-
-			<hr />
 
 			<section>
 				<h2 id="othertypography">Other Typography</h2>
@@ -556,19 +526,15 @@ Highlight the CLI text and press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kb
 				<time datetime="2022-03-01" pubdate>01 March 2022</time>
 			</section>
 
-			<hr />
-
 			<section>
 				<h2 id="figure">Figure</h2>
 				<figure>
 					<img src="https://gratisography.com/wp-content/uploads/2019/10/gratisography-monkey-bench-girl-free-stock-photo-1170x780.jpg" alt="Figure Example">
 					<figcaption>
-						Apes need friends too. Hosted by <a href="https://gratisography.com/">gratisography.com</a>
+						<small>Apes need friends too. Hosted by <a href="https://gratisography.com/">gratisography.com</small></a>
 					</figcaption>
 				</figure>
 			</section>
-
-			<hr />
 
 			<section>
 				<h2 id="table">Table</h2>
@@ -621,6 +587,7 @@ Highlight the CLI text and press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kb
 			</div>
 			<div class="footerColumn">
 				<h3>Footer Column</h3>
+				<a>Some Link</a>
 			</div>
 			<div class="footerColumn">
 				<h3>Social</h3>

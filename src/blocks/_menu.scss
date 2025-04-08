@@ -10,6 +10,12 @@
 	&--column {
 		flex-flow: column;
 		width: max-content;
+		justify-content: center;
+
+		a.menu_item {
+			padding-inline: 0;
+			width: max-content;
+		}
 	}
 
 	.menu_item {
@@ -20,18 +26,19 @@
 		background: $colour_themeBackground;
 		color: $colour_themeForeground;
 		font-weight: bold;
-		transition: background-size .25s ease,
-		            background .25s ease;
+		transition: background .25s ease;
 
 		&:where( .menu > .menu_item ) {
-			background-image: linear-gradient(to right, #0000 4.999%, $colour_themeForeground 5%, $colour_themeForeground 95%, #0000 95.001%);
-			background-size: 100% 0%;
-			background-position: 0 100%;
+			transition: background-size $animation_duration ease;
+			background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+			background-position: 0 80%;
 			background-repeat: no-repeat;
+			background-size: 100% 0%;
 			text-decoration: none;
+			color: inherit;
 		
 			&:hover {
-				background-size: 100% 15%;
+				background-size: 100% 0.3em;
 				cursor: pointer;
 			}
 		}
