@@ -114,7 +114,7 @@ pre:has(code),
 pre:has(samp) {
     border-radius: $radius_medium;
 	background-color: $colour_black;
-	padding: $space_XSmall;
+	padding: $space_small $space_XSmall;
 	overflow-x: auto;
 	line-height: 1.4;
 	color: $colour_white;
