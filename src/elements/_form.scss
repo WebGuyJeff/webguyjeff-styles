@@ -3,7 +3,7 @@
 %inputgrid {
 	gap: $space_small;
 	display: grid;
-	grid-template-columns: fit-content(5em) auto;
+	grid-template-columns: repeat( auto-fit, minmax( 100%, 20em ) );
 
 	/* Stop grid children overflowing. */
 	&>* {

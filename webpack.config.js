@@ -40,7 +40,17 @@ const config = {
 	target: 'web',
 	plugins: [
 		new HtmlWebpackPlugin({
-		  	template: "index.html",
+			template: './src/index.html',
+			filename: 'index.html',
+			minify: {
+				collapseWhitespace: true,
+				keepClosingSlash: true,
+				removeComments: true,
+				removeRedundantAttributes: false, // E.g. do not remove input type="text".
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributes: true,
+				useShortDoctype: true
+			}
 		}),
 	],
 };
